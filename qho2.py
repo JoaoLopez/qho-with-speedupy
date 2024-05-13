@@ -122,10 +122,10 @@ if __name__ == '__main__':
     dex = np.where((q1**2+q2**2)<10)[0]
     tri = Triangulation(q2[dex],q1[dex])
     fig = plt.figure(1)
-    ax =  fig.gca(projection='3d')
+    ax =  fig.add_subplot(projection='3d')
     ax.plot_trisurf(tri,psi[dex], cmap=cm.jet, linewidth=0.2 ) 
     ax.set_xlabel(r'$q_1$',fontsize=18)
     ax.set_ylabel(r'$q_2$',fontsize=18)
-    plt.show()
+    plt.show(block=False)
 
   
